@@ -1,46 +1,43 @@
-# Dhyana
+# dhyana
 
-AI-powered meditation guide with session management, guided meditations, and progress tracking.
+**Dhyana — AI Meditation Guide. Personalized meditation sessions with biofeedback integration.**
 
-## Features
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-- **Guided Meditations**: 20+ scripted meditation sessions across multiple styles
-- **Technique Library**: 15+ meditation techniques including Vipassana, Zazen, Yoga Nidra, and more
-- **Session Tracking**: Log duration, technique, and mood for every meditation session
-- **Progress Tracking**: Streaks, total time, consistency scores, and milestone badges
-- **Meditation Timer**: Configurable timer with bell intervals and ambient descriptions
-
-## Installation
-
+## Install
 ```bash
-pip install -e .
+pip install -e ".[dev]"
 ```
 
-## Usage
-
-```bash
-# Start a guided meditation
-dhyana meditate
-
-# Browse techniques
-dhyana techniques
-
-# Start a timed meditation
-dhyana timer --duration 20
-
-# View session history
-dhyana history
-
-# View your stats and progress
-dhyana stats
+## Quick Start
+```python
+from src.core import Dhyana
+ instance = Dhyana()
+r = instance.process(input="test")
 ```
 
-## Dependencies
+## CLI
+```bash
+python -m src status
+python -m src run --input "data"
+```
 
-- **pydantic**: Data validation and models
-- **click**: Command-line interface
-- **rich**: Beautiful terminal output
+## API
+| Method | Description |
+|--------|-------------|
+| `process()` | Process |
+| `analyze()` | Analyze |
+| `transform()` | Transform |
+| `validate()` | Validate |
+| `export()` | Export |
+| `get_stats()` | Get stats |
+| `get_stats()` | Get stats |
+| `reset()` | Reset |
 
-## Author
+## Test
+```bash
+pytest tests/ -v
+```
 
-Mukunda Katta
+## License
+(c) 2026 Officethree Technologies. All Rights Reserved.
